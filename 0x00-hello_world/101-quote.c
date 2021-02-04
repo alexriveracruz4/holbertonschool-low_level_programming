@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- *main - Print a phrase
+ * main - Print a phrase
  *
- *Return : 1
+ * Return : 1
  */
 int main(void)
 {
