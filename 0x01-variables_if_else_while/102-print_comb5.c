@@ -6,28 +6,21 @@
  */
 int main(void)
 {
-	int a, b, m, n, o, p;
+	int a, b;
 
-	for (a = 0; a < 100; a++)
+	for (a = 0; a <= 98; a++)
 	{
-		m = a / 10;
-		n = a % 10;
-		for (b = 0; b < 100; b++)
+		for (b = a + 1; b <= 99; b++)
 		{
-			o = b / 10;
-			p = b % 10;
-			if (m < o || (m = o && n < p})
+			putchar((a / 10) + '0');
+			putchar((a % 10) + '0');
+			putchar(' ');
+			putchar((b / 10) + '0');
+			putchar((b % 10) + '0');
+			if (a != 98 || b != 99)
 			{
-				putchar(m + '0');
-				putchar(n + '0');
+				putchar(',');
 				putchar(' ');
-				putchar(o + '0');
-				putchar(p + '0');
-				if (m != 9 || n != 8)
-				{
-					putchar(',');
-					putchar(' ');
-				}
 			}
 		}
 	}
