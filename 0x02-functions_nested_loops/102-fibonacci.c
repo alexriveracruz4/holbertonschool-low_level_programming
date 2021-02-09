@@ -11,19 +11,19 @@ int main(void)
 	int b = 2;
 	int c, d;
 
-	printf("%d, %d, ", a, b);
+	printf("%ld, %ld, ", a, b);
 	for (c = 1; c <= 48; c++)
 	{
 		d = a + b;
 		if (c != 48)
 		{
-			printf("%d, ", d);
+			printf("%ld, ", d);
 			a = b;
 			b = d;
 		}
 		else
 		{
-			printf("%d\n", d);
+			printf("%ld\n", d);
 		}
 	}
 	return (0);
