@@ -9,9 +9,10 @@ int main(void)
 {
 	int a = 1;
 	int b = 2;
-	int c, d;
+	int c;
+	long int d;
 
-	printf("%ld, %ld, ", a, b);
+	printf("1, 2, ");
 	for (c = 1; c <= 48; c++)
 	{
 		d = a + b;
