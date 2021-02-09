@@ -27,5 +27,6 @@ int main(void)
 			printf("%lu\n", d);
 		}
 	}
+
 	return (0);
 }
