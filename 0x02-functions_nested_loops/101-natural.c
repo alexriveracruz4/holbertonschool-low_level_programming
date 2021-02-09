@@ -4,7 +4,7 @@
  * main - program that computes and prints the sum of all the multiples of 3
  * or 5 below 1024 (excluded)
  *
- * Return: sum of multiples
+ * Return: 0 exit success
  */
 int main(void)
 {
@@ -18,6 +18,6 @@ int main(void)
 			m = m + n;
 		}
 	}
-
-	return (m);
+	printf("%d\n", m);
+	return (0);
 }
