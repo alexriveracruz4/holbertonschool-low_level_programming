@@ -7,8 +7,8 @@
  */
 int main(void)
 {
-	int a = 1;
-	int b = 2;
+	long int a = 1;
+	long int b = 2;
 	int c;
 	long int d;
 
