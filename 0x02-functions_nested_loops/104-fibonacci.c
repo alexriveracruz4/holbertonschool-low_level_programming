@@ -16,7 +16,7 @@ int main(void)
 	for (c = 1; c <= 96; c++)
 	{
 		d = a + b;
-		if (c != 48)
+		if (c != 96)
 		{
 			printf("%lu, ", d);
 			a = b;
