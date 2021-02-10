@@ -7,10 +7,10 @@
  */
 int main(void)
 {
-	unsigned long int a = 1;
-	unsigned long int b = 2;
+	unsigned long a = 1;
+	unsigned long b = 2;
 	int c;
-	unsigned long int d;
+	unsigned long d;
 
 	printf("1, 2, ");
 	for (c = 1; c <= 96; c++)
