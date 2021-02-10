@@ -8,7 +8,7 @@
  */
 void print_times_table(int n)
 {
-	int a, b, c;
+	long int a, b, c;
 
 	if (n >= 0 && n <= 15)
 	{
@@ -44,9 +44,5 @@ void print_times_table(int n)
 				}
 			}
 		}
-	}
-	else
-	{
-		return;
 	}
 }
