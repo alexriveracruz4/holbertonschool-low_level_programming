@@ -26,7 +26,10 @@ int main(void)
 				printf("%d ", n);
 		}
 		else
+		{
 			printf("Buzz\n");
+		}
 		n++;
 	}
+	return (0);
 }
