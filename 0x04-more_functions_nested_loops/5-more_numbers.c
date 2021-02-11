@@ -11,7 +11,7 @@ void more_numbers(void)
 	int n = 0;
 	int t = 0;
 
-	while (t <= 10)
+	while (t < 10)
 	{
 		while (n <= 14)
 		{
@@ -22,6 +22,8 @@ void more_numbers(void)
 			_putchar((n % 10) + '0');
 			n++;
 		}
+		n = 0;
+		t++;
 		_putchar('\n');
 	}
 }
