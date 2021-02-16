@@ -13,7 +13,7 @@ void print_array(int *a, int n)
 {
 	int pos = 0;
 
-	while (pos < n - 1)
+	while (pos < (n - 1))
 	{
 		printf("%i, ", a[pos]);
 		pos++;
