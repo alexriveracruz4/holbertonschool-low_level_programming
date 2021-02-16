@@ -15,7 +15,7 @@ void print_array(int *a, int n)
 
 	while (pos < n - 1)
 	{
-		printf("%d, ", a[pos]);
+		printf("%i, ", a[pos]);
 		pos++;
 	}
 	printf("%d\n", a[pos]);
