@@ -18,5 +18,5 @@ void print_array(int *a, int n)
 		printf("%i, ", a[pos]);
 		pos++;
 	}
-	printf("%d\n", a[pos]);
+	printf("%i\n", a[pos]);
 }
