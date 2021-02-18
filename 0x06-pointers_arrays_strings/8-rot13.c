@@ -11,6 +11,7 @@ char *rot13(char *s)
 	char abc[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char cba[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	int pos = 0;
+	int i;
 
 	while (s[pos] != 0)
 	{
