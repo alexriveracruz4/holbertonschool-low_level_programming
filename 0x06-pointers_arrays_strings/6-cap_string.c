@@ -10,6 +10,7 @@ char *cap_string(char *s)
 {
 	int pos = 0;
 	char car[] = " \t\n,;.!?\"(){}";
+	int i;
 
 	while (s[pos] != 0)
 	{
@@ -30,4 +31,5 @@ char *cap_string(char *s)
 		}
 		pos++;
 	}
+	return(s);
 }
