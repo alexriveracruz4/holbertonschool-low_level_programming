@@ -8,7 +8,6 @@
  */
 void print_number(int n)
 {
-	int i;
 
 	if (n < 0)
 	{
