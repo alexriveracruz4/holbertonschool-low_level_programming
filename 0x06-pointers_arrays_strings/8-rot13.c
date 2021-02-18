@@ -19,7 +19,7 @@ char *rot13(char *s)
 		{
 			if (s[pos] == abc[i])
 			{
-				s[pos] == cba[i];
+				s[pos] = cba[i];
 				break;
 			}
 		}
