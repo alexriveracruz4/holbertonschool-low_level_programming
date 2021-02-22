@@ -1,0 +1,1 @@
+This project is about learning C - Even more pointers, arrays and strings
