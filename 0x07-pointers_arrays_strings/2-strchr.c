@@ -27,8 +27,5 @@ char *_strchr(char *s, char c)
 		}
 		counter++;
 	}
-
-	if (s[counter] == 0)
-		f = 0;
 	return (f);
 }
