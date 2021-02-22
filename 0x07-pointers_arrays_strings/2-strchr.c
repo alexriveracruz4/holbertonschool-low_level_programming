@@ -11,19 +11,13 @@
 char *_strchr(char *s, char c)
 {
 
-	int len_s = 0;
 	int counter = 0;
-	char *f;
 
-	while (s[len_s] != 0)
-		len_s++;
-
-	while (counter < len_s)
+	while (s[counter] != 0)
 	{
 		if (s[counter] == c)
 		{
-			f = &s[counter];
-			return (f);
+			return (&s[counter]);
 		}
 		counter++;
 	}
