@@ -10,12 +10,12 @@
 
 int divisor(int n, int div)
 {
-        if (div > n / 2)
-                return (1);
-        else if (n % div == 0)
-                return (0);
-        else
-                return (divisor(n, div + 1));
+	if (div > n / 2)
+		return (1);
+	else if (n % div == 0)
+		return (0);
+	else
+		return (divisor(n, div + 1));
 }
 
 /**
