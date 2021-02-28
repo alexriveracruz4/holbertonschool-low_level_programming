@@ -30,13 +30,13 @@ int main(int argc, char *argv[])
 	{
 		for (i = 0; i < 5; i++)
 		{
-			if (cents % change[i] == 0 && cents != 0)
+			if (cents >= change[i] && cents != 0)
 			{
 				n_change += cents / change[i];
 				cents -= change[i] * (cents / change[i]);
 			}
 		}
+		printf("%d\n", n_change);
 	}
-	printf("%d\n", n_change);
 	return (0);
 }
