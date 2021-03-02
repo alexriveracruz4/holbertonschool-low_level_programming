@@ -28,7 +28,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
-		for (lens2 = 0; s2[lens2]; lense++)
+		for (lens2 = 0; s2[lens2]; lens2++)
 			;
 	}
 
