@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
 
 	int (*func)(int, int);
-	int result, n1 ,n2;
+	int result, n1, n2;
 
 	if (argc != 4)
 	{
