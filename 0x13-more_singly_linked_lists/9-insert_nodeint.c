@@ -32,9 +32,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	node1 = NULL;
 	for (i = 0; i < idx; i++)
 	{
-		node1 = node2;
-		if (node1 == NULL)
+		if (node2 == NULL)
 			return (NULL);
+		node1 = node2;
 		node2 = node2->next;
 	}
 	new->n = n;
