@@ -71,7 +71,7 @@ size_t free_listint_safe(listint_t **h)
 		free(*h);
 		*h = tmp;
 		i++;
-		for (i = 0; *h != node; i++)
+		for (; *h != node; i++)
 		{
 			tmp = (*h)->next;
 			free(*h);
@@ -80,6 +80,5 @@ size_t free_listint_safe(listint_t **h)
 		*h = NULL;
 	}
 	h = NULL;
-	node = NULL;
 	return (i);
 }
