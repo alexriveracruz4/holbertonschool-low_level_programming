@@ -46,7 +46,7 @@ listint_t *find_listint_loop3(listint_t *head)
 size_t free_listint_safe(listint_t **h)
 {
 	listint_t *node, *tmp;
-	size_t nodes, index;
+	size_t i;
 
 	node = find_listint_loop3(*h);
 
