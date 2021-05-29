@@ -29,6 +29,43 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 
 /**
+ * add_to_list - add node to sorted list
+ * @ht:hash table
+ * @node: node to be added
+ * @key: key
+ *
+ * Return: void
+ *
+ */
+void add_to_list(shash_table_t *ht, shash_node_t *node, const char *key)
+{
+	shash_node_t *tmp;
+
+	if (ht->shead == NULL)
+	{
+		node->sprev = NULL, node->snext = NULL, ht->shead = node;
+		ht->stail = node;
+	}
+	else if (strcmp(ht->shead->key, key) > 0)
+	{
+		node->sprev = NULL, node->snext = ht->shead;
+		ht->shead->sprev = node, ht->shead = node;
+	}
+	else
+	{
+		tmp = ht->shead;
+		while (tmp->snext != NULL && strcmp(tmp->snext->key, key) < 0)
+			tmp = tmp->snext;
+		node->sprev = tmp, node->snext = tmp->snext;
+		if (tmp->snext == NULL)
+			ht->stail = node;
+		else
+			tmp->snext->sprev = node;
+		tmp->snext = node;
+	}
+}
+
+/**
  * shash_table_set -  function that adds an element to the hash table
  * @ht: hash table
  * @key: key
@@ -47,14 +84,12 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	value_2 = strdup(value);
 	if (value_2 == NULL)
 		return (0);
-	idx = key_index((const unsigned char *)key, ht->size);
-	tmp = ht->shead;
+	idx = key_index((const unsigned char *)key, ht->size), tmp = ht->shead;
 	while (tmp)
 	{
 		if (strcmp(tmp->key, key) == 0)
 		{
-			free(tmp->value);
-			tmp->value = value_2;
+			free(tmp->value), tmp->value = value_2;
 			return (1);
 		}
 		tmp = tmp->snext;
@@ -71,40 +106,12 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		free(node);
 		return (0);
 	}
-	node->value = value_2;
-	node->next = ht->array[idx];
+	node->value = value_2, node->next = ht->array[idx];
 	ht->array[idx] = node;
-
-	if (ht->shead == NULL)
-	{
-		node->sprev = NULL;
-		node->snext = NULL;
-		ht->shead = node;
-		ht->stail = node;
-	}
-	else if (strcmp(ht->shead->key, key) > 0)
-	{
-		node->sprev = NULL;
-		node->snext = ht->shead;
-		ht->shead->sprev = node;
-		ht->shead = node;
-	}
-	else
-	{
-		tmp = ht->shead;
-		while (tmp->snext != NULL && strcmp(tmp->snext->key, key) < 0)
-			tmp = tmp->snext;
-		node->sprev = tmp;
-		node->snext = tmp->snext;
-		if (tmp->snext == NULL)
-			ht->stail = node;
-		else
-			tmp->snext->sprev = node;
-		tmp->snext = node;
-	}
+	add_to_list(ht, node, key);
 	return (1);
-}
 
+}
 
 /**
  * shash_table_get - function that retrieves a value associated with a key.
