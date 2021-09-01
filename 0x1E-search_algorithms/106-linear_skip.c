@@ -26,7 +26,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 		}
 		else
 		{
-			while(r->next != NULL)
+			while (r->next != NULL)
 				r = r->next;
 		}
 	}
